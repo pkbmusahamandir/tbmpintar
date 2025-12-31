@@ -1,0 +1,332 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+ body {
+     font-family: "Poppins", sans-serif;
+ }
+
+ /* Button */
+ .btn-danger {
+     background-color: #bd0001;
+     border-radius: 10px;
+     border-color: #bd0001;
+     padding: 10px 45px;
+     color: white;
+ }
+
+ .btn-outline-danger {
+     background-color: transparent;
+     border-radius: 10px;
+     border-color: #bd0001;
+     padding: 10px 45px;
+     color: #bd0001;
+ }
+
+ /* Navbar */
+ .nav.item .nav-link {
+     font-size: 18px;
+     margin-left: 5px;
+     margin-right: 5px;
+ }
+
+ .scroll-nav-active {
+     background-color: white;
+     /* border-bottom: 1px solid #bd0001; */
+     box-shadow: 1px 1px 11px -1px rgb(1, 1, 1, 0.08);
+ }
+
+ .text-nav-active {
+     color: black;
+ }
+
+ .navbar-nav .nav-link {
+     font-size: 18px;
+     /* bisa disesuaikan 16–20px */
+     font-weight: 500;
+     /* biar agak tegas */
+ }
+
+ /* Efek hover nav-link */
+.navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Warna teks berubah + animasi garis bawah */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* jarak garis dengan teks */
+    width: 0%;
+    height: 2px;
+    background-color: #1a9d23; /* biru bootstrap */
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1a9d23; /* teks berubah biru */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* garis muncul dari kiri ke kanan */
+}
+
+
+
+ /* hero */
+ #hero {
+     /* background-image: url('../../assets/bg-hero.jpg'); */
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     height: 800px;
+ }
+
+ .hero-title {
+     padding-top: 200px;
+ }
+
+ /* .hero-text {
+     font-size: 65px;
+     font-weight: 600;
+ } */
+
+ /* Responsive layar kecil 450px*/
+ @media screen and (min-width: 450px) {
+     .hero-text {
+         font-size: 35px;
+         font-weight: 600;
+     }
+ }
+
+ /* Responsive layar kecil 550px */
+ @media screen and (min-width: 550px) {
+     .hero-text {
+         font-size: 35px;
+         font-weight: 600;
+     }
+ }
+
+ /* Responsive layar kecil 800px */
+ @media screen and (min-width: 800px) {
+     .hero-text {
+         font-size: 65px;
+         font-weight: 600;
+     }
+ }
+
+ /* Join */
+ .stripe {
+     height: 5px;
+     width: 20px;
+     background-color: #bd0001;
+ }
+
+ /* Video */
+ #video {
+     /* background-image: url("../../assets/images/il-bg-video.jpg"); */
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     height: 500px;
+ }
+
+ /* Foto */
+ /* Parallax Background */
+ .section-foto {
+     background-attachment: fixed;
+     background-position: top;
+     background-size: cover;
+     height: 500px;
+     width: 100%;
+     color: #ffffff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .parallax {
+     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+         /* url("../../../assets/images/bg-foto.png"); */
+ }
+
+ /* Gaya untuk garis putih di judul */
+ .stripe-putih {
+     height: 5px;
+     width: 40px;
+     background-color: #000000;
+ }
+
+ /* Tombol "Foto lainnya" */
+ .btn-outline-custom {
+     color: #000000;
+     border: 2px solid #000000;
+     background-color: transparent;
+     padding: 8px 20px;
+     border-radius: 8px;
+     font-weight: 500;
+     transition: all 0.3s ease;
+     text-decoration: none;
+ }
+
+ .btn-outline-custom:hover {
+     background-color: #ffffff;
+     color: #000000;
+     text-decoration: none;
+ }
+
+ /* Tambahan CSS untuk merapikan grid foto */
+ .photo-card {
+     text-align: center;
+ }
+
+ .photo-wrapper {
+     width: 100%;
+     aspect-ratio: 4 / 3;
+     /* Jaga agar gambar tetap proporsional */
+     overflow: hidden;
+     border-radius: 8px;
+ }
+
+ .photo-wrapper img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: 0.3s ease;
+     border-radius: 8px;
+ }
+
+ .photo-wrapper img:hover {
+     transform: scale(1.05);
+ }
+
+ .photo-title {
+     margin-top: 8px;
+     color: rgb(0, 0, 0);
+     font-weight: 500;
+ }
+
+
+ /* Fasilitas */
+ .fasilitas-item {
+     width: 160px;
+     height: 120px;
+     overflow: hidden;
+     border-radius: 15px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+ }
+
+ .fasilitas-item img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 15px;
+     transition: transform 0.3s ease;
+ }
+
+ .fasilitas-item img:hover {
+     transform: scale(1.05);
+ }
+
+ .shadow-bottom {
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+ }
+
+ /* Card Literasi */
+ .literasi-card {
+     background: #fff;
+     border-radius: 15px;
+     padding: 20px;
+     text-align: center;
+     transition: all 0.3s ease-in-out;
+     height: 100%;
+ }
+
+ .literasi-card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+ }
+
+ .literasi-icon {
+     font-size: 40px;
+     margin-bottom: 10px;
+ }
+
+ /* warna tambahan */
+ .text-purple {
+     color: #8e44ad;
+ }
+
+ /* PROFIL TBM */
+
+ /* Background section */
+ .profil-section {
+     background: linear-gradient(135deg, #f8f9fa, #e9f7ef);
+     background-attachment: fixed;
+ }
+
+ /* Hover effect untuk card */
+ .card {
+     transition: all 0.3s ease;
+ }
+
+ .card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+ }
+
+ /* Hover zoom pada foto */
+ .hover-zoom {
+     transition: transform 0.3s ease;
+ }
+
+ .hover-zoom:hover {
+     transform: scale(1.05);
+ }
+
+ /* Divider animasi */
+ .fancy-divider {
+     position: relative;
+     overflow: hidden;
+     height: 4px !important;
+     border-radius: 5px;
+     background: #198754;
+ }
+
+ .fancy-divider::after {
+     content: "";
+     position: absolute;
+     left: -100%;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, white, transparent);
+     animation: slide 2s linear infinite;
+ }
+
+ @keyframes slide {
+     from {
+         left: -100%;
+     }
+
+     to {
+         left: 100%;
+     }
+ }
+
+ /* Fade in animasi */
+ [data-fade] {
+     opacity: 0;
+     transform: translateY(30px);
+     animation: fadeUp 0.8s ease forwards;
+ }
+
+ @keyframes fadeUp {
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
