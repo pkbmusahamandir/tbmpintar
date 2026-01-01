@@ -17,7 +17,7 @@
                     <div class="photo-card">
                         <a class="image-link" href="{{ asset('storage/' . $photo->image) }}">
                             <div class="photo-wrapper">
-                                <img src="{{ asset('storage/' . $photo->image) }}" alt="{{ $photo->judul }}">
+                                <img src="{{ Storage::url('photos/1767151454.jpg') }}">
                             </div>
                         </a>
                         <p class="photo-title">{{ $photo->judul }}</p>
